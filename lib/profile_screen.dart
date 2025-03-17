@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'my_profile_screen.dart';
 import 'select_language_screen.dart';
+import 'help_support_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -218,6 +219,14 @@ class ProfileScreen extends StatelessWidget {
               iconAsset: 'assets/images/help\$support.png',
               iconBackground: const Color(0xFFE8F5E9),
               title: 'Help & Support',
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HelpSupportScreen(),
+                  ),
+                );
+              },
             ),
 
             const SizedBox(
